@@ -34,25 +34,27 @@ export const Skills = () => {
 						<div className="skill-bx">
 							<h2>Skills</h2>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quae doloribus
-								ipsum, aspernatur eaque ut dolorem pariatur sit sequi quam.
+								I'm a skilled front-end developer with a passion for creating beautiful and
+								functional websites. With several years of experience in the field, I've worked on a
+								wide range of projects, from small business sites to large-scale e-commerce
+								platforms.
 							</p>
 							<Carousel responsive={responsive} infinite={true} className="skill-slider">
 								<div className="item">
 									<img src={meter1} alt="Alt" />
-									<h5>Web Development</h5>
+									<h5>React</h5>
 								</div>
 								<div className="item">
 									<img src={meter2} alt="Alt" />
-									<h5>Brand Identity</h5>
+									<h5>Redux</h5>
 								</div>
 								<div className="item">
 									<img src={meter3} alt="Alt" />
-									<h5>Logo Design</h5>
+									<h5>JavaScript</h5>
 								</div>
 								<div className="item">
 									<img src={meter1} alt="Alt" />
-									<h5>Web Development</h5>
+									<h5>CSS</h5>
 								</div>
 							</Carousel>
 						</div>

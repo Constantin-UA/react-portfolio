@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import contactImg from '../assets/img/contact-img.svg';
+import contactImg from '../assets/img/contact 1.svg';
 
 export const Contact = () => {
 	const formInitialDetails = {

@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/header-img.svg';
+import headerImg from '../assets/img/header-logo.svg';
 import 'animate.css/animate.min.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
 	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
-	const toRotate = ['Web Developer', 'Web Designer', 'UI/UX Designer'];
+	const toRotate = ['Web Developer', 'React lover', 'UI/UX Designer'];
 	const [text, setText] = useState('');
 	const [delta, setDelta] = useState(300 - Math.random() * 100);
 	const period = 2000;
@@ -58,16 +58,17 @@ export const Banner = () => {
 											: 'animate__animated animate__fadeOut'
 									}
 								>
-									<span className="tagline">Welcome to my Space</span>
+									<span className="tagline">Welcome to my portfolio site!</span>
+									<h1>{`Hi I'm Konstantin`}</h1>
 									<h1>
-										{` Hi I'm webdecoded `}
-										<span className="wrap">{text}</span>
+										{`-`}
+										<span className="wrap"> {text}</span>
 									</h1>
 									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur
-										temporibus dignissimos fugiat, error, repellat cumque, minima tempore soluta
-										officia nesciunt. Consequuntur numquam id at voluptatibus reiciendis commodi
-										ipsum recusandae.
+										As a developer, I prioritize user experience and accessibility, and strive to
+										create sites that are both visually appealing and easy to use. Whether you're
+										looking to build a new website from scratch, or enhance an existing one, I'm
+										confident that I can help bring your vision to life.
 									</p>
 									<button onClick={() => console.log('connect')}>
 										Let's connect <ArrowRightCircle size={25} />

@@ -1,56 +1,48 @@
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import { ProjectCard } from './ProjectCard';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
+
+import projImg1 from '../assets/img/proj/1.png';
+import projImg2 from '../assets/img/proj/2.png';
+import projImg3 from '../assets/img/proj/3.png';
+import projImg4 from '../assets/img/proj/4.png';
+import projImg5 from '../assets/img/proj/5.png';
+import projImg6 from '../assets/img/proj/6.png';
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 	const projects = [
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
+			title: 'ROAMWELL TRAVEL CO.',
+			description: 'WHERE EVERY JOURNEY IS A STORY WORTH TELLING',
 			imgUrl: projImg1,
 		},
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
+			title: 'SPACE TRAVEL',
+			description: 'SO, YOU WANT TO TRAVEL TO SPACE?',
 			imgUrl: projImg2,
 		},
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
+			title: 'Creative Catalyst',
+			description:
+				"Where art meets design. From logo and branding design to web design, packaging, and more, Creative Catalyst is passionate about crafting designs that effectively communicate our clients' unique stories and personalities. With a focus on quality and creativity, we strive to make a positive impact on the world, one design at a time.",
 			imgUrl: projImg3,
 		},
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg1,
+			title: 'IP Address Tracker',
+			description: 'Do you want to know where one or the other IP is located?',
+			imgUrl: projImg4,
 		},
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg2,
+			title: 'Sunnyside',
+			description:
+				'Transform your brand. Stand out to the right audience. Graphic design. Photography.',
+			imgUrl: projImg5,
 		},
 		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg3,
-		},
-		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg1,
-		},
-		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg2,
-		},
-		{
-			title: 'Business Startup',
-			description: 'Design & Development',
-			imgUrl: projImg3,
+			title: 'Power of AI',
+			description:
+				"Here, we're passionate about all things AI. Whether you're a newcomer to the field or a seasoned expert, we have everything you need to learn more about this exciting and rapidly-evolving technology.",
+			imgUrl: projImg6,
 		},
 	];
 	return (
@@ -69,8 +61,10 @@ export const Projects = () => {
 								>
 									<h2>Projects</h2>
 									<p>
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, rerum
-										ratione? Dolorem provident ea eius!
+										In my portfolio, you'll find examples of my work, including websites that I've
+										built for clients in a variety of industries. From responsive design to
+										interactive features, I'm skilled in a range of front-end technologies,
+										including HTML, CSS, JavaScript, and more.
 									</p>
 								</div>
 							)}
@@ -82,13 +76,13 @@ export const Projects = () => {
 								id="pills-tab"
 							>
 								<Nav.Item>
-									<Nav.Link eventKey="first">Tab One</Nav.Link>
+									<Nav.Link eventKey="first">One</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
-									<Nav.Link eventKey="second">Tab Two</Nav.Link>
+									<Nav.Link eventKey="second">Two</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
-									<Nav.Link eventKey="third">Tab Three</Nav.Link>
+									<Nav.Link eventKey="third">Three</Nav.Link>
 								</Nav.Item>
 							</Nav>
 							<Tab.Content>
