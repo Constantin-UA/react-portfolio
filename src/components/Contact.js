@@ -1,47 +1,33 @@
-import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 import { Container, Row, Col } from 'react-bootstrap';
-
 import contactImg from '../assets/img/contact 1.svg';
 
 export const Contact = () => {
-	const formInitialDetails = {
-		firsName: '',
-		lastName: '',
-		email: '',
-		phone: '',
-		message: '',
-	};
+	const validationSchema = Yup.object({
+		firstName: Yup.string()
+			.min(3, 'Потрібно вказати більше 3 символів.')
+			.required('Заповніть це поле.'),
 
-	const [formDetails, setFormDetails] = useState(formInitialDetails);
-	const [buttonText, setButtonText] = useState('Send');
-	const [status, setStatus] = useState({});
+		lastName: Yup.string()
+			.min(3, 'Потрібно вказати більше 3 символів.')
+			.required('Заповніть це поле.'),
 
-	const onFormUpdate = (category, value) => {
-		setFormDetails({
-			...formDetails,
-			[category]: value,
-		});
-	};
+		email: Yup.string().email('Вказана некорректна адреса.').required('Заповніть це поле.'),
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-		setButtonText('Sending...');
-		let response = await fetch('http:/localhost:5000/contact', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'Application/json;charset=utf-8',
-			},
-			body: JSON.stringify(formDetails),
-		});
-		setButtonText('Send');
-		let result = response.json();
-		setFormDetails(formInitialDetails);
-		if (result.code === 200) {
-			setStatus({ success: true, message: 'Message sent successfully' });
-		} else {
-			setStatus({ success: false, message: 'Something went wrong. please try again later' });
-		}
-	};
+		phone: Yup.number().min(5, 'Не меншьше 5  символів.').required('Заповніть це поле.'),
+		textarea: Yup.string().min(10, 'Потрібно вказати більше 10 символів.'),
+	});
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm({
+		resolver: yupResolver(validationSchema),
+	});
+
+	const onSubmit = (data) => console.log(data);
 
 	return (
 		<section className="contact" id="contact">
@@ -52,58 +38,39 @@ export const Contact = () => {
 					</Col>
 					<Col md={6}>
 						<h2>Get in Touch</h2>
-						<form onSubmit={handleSubmit}>
+						<form onSubmit={handleSubmit(onSubmit)}>
 							<Row>
-								<Col sm={6} className="px-1">
+								<Col sm={6} className="px-1 text-align-center">
 									<input
-										type="text"
-										value={formDetails.firstName}
+										{...register('firstName', { required: true, minLength: 4 })}
+										aria-invalid={errors.firstName ? 'true' : 'false'}
 										placeholder="First Name"
-										onChange={(e) => onFormUpdate('firstName', e.target.value)}
 									/>
+									{errors.firstName && <p role="alert">{errors.firstName?.message}</p>}
+								</Col>
+								<Col sm={6} className="px-1">
+									<input {...register('lastName', { required: true })} placeholder="Last Name" />
+									{errors.lastName && <p role="alert">{errors.lastName?.message}</p>}
+								</Col>
+								<Col sm={6} className="px-1">
+									<input {...register('email', { required: true })} placeholder="Email Address" />
+									{errors.email && <p role="alert">{errors.email?.message}</p>}
 								</Col>
 								<Col sm={6} className="px-1">
 									<input
-										type="text"
-										value={formDetails.lastName}
-										placeholder="Last Name"
-										onChange={(e) => onFormUpdate('lastName', e.target.value)}
-									/>
-								</Col>
-								<Col sm={6} className="px-1">
-									<input
-										type="email"
-										value={formDetails.email}
-										placeholder="Email Address"
-										onChange={(e) => onFormUpdate('email', e.target.value)}
-									/>
-								</Col>
-								<Col sm={6} className="px-1">
-									<input
-										type="tel"
-										value={formDetails.phone}
+										className={errors.phone ? 'error-border' : null}
+										{...register('phone')}
 										placeholder="Phone No."
-										onChange={(e) => onFormUpdate('phone', e.target.value)}
 									/>
 								</Col>
 								<Col className="px-1">
-									<textarea
-										row="6"
-										value={formDetails.message}
-										placeholder="Message"
-										onChange={(e) => onFormUpdate('message', e.target.value)}
-									/>
+									<textarea row="6" {...register('textarea')} placeholder="Message" />
+									{errors.phone && <p role="alert">{errors.textarea?.message}</p>}
+
 									<button type="submit">
-										<span>{buttonText}</span>
+										<span>Send</span>
 									</button>
 								</Col>
-								{status.message && (
-									<Col>
-										<p className={status.success === false ? 'danger' : 'success'}>
-											{status.message}
-										</p>
-									</Col>
-								)}
 							</Row>
 						</form>
 					</Col>
