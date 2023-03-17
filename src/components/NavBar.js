@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/img/logo/logo.png';
 import navLogo1 from '../assets/img/nav-icon1.svg';
 import navLogo2 from '../assets/img/nav-icon2.svg';
-import navLogo3 from '../assets/img/nav-icon3.svg';
+import navLogo3 from '../assets/img/nav-icon.svg';
 
 export const NavBar = () => {
 	const [activeLink, setActiveLink] = useState('home');
@@ -66,13 +66,13 @@ export const NavBar = () => {
 					</Nav>
 					<span className="navbar-text">
 						<div className="social-icon">
-							<a href="#">
+							<a href="https://www.linkedin.com/in/konstantin-shtanko-686021234/">
 								<img src={navLogo1} alt="" />
 							</a>
-							<a href="#">
+							<a href="https://www.facebook.com/constantine.shtanko">
 								<img src={navLogo2} alt="" />
 							</a>
-							<a href="#">
+							<a href="https://github.com/Constantin-UA">
 								<img src={navLogo3} alt="" />
 							</a>
 						</div>

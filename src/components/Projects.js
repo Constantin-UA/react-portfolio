@@ -1,48 +1,64 @@
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import { ProjectCard } from './ProjectCard';
 
-import projImg1 from '../assets/img/proj/1.png';
-import projImg2 from '../assets/img/proj/2.png';
-import projImg3 from '../assets/img/proj/3.png';
-import projImg4 from '../assets/img/proj/4.png';
-import projImg5 from '../assets/img/proj/5.png';
-import projImg6 from '../assets/img/proj/6.png';
+import projImg1 from '../assets/img/proj/alfa.png';
+import projImg3 from '../assets/img/proj/roam.png';
+import projImg4 from '../assets/img/proj/ai.png';
+import projImg5 from '../assets/img/proj/ipfind.png';
+import projImg6 from '../assets/img/proj/coffe.png';
+import projImg2 from '../assets/img/proj/richS.png';
+import projImg7 from '../assets/img/proj/skgranite.png';
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 	const projects = [
 		{
+			title: 'Design dev',
+			description:
+				'Where art meets design. From logo and branding design to web design, packaging, and more. With a focus on quality and creativity, we strive to make a positive impact on the world, one design at a time.',
+			imgUrl: projImg1,
+			link: 'https://constantine-web.space/',
+		},
+		{
 			title: 'ROAMWELL TRAVEL CO.',
 			description: 'WHERE EVERY JOURNEY IS A STORY WORTH TELLING',
-			imgUrl: projImg1,
-		},
-		{
-			title: 'SPACE TRAVEL',
-			description: 'SO, YOU WANT TO TRAVEL TO SPACE?',
-			imgUrl: projImg2,
-		},
-		{
-			title: 'Creative Catalyst',
-			description:
-				"Where art meets design. From logo and branding design to web design, packaging, and more, Creative Catalyst is passionate about crafting designs that effectively communicate our clients' unique stories and personalities. With a focus on quality and creativity, we strive to make a positive impact on the world, one design at a time.",
 			imgUrl: projImg3,
-		},
-		{
-			title: 'IP Address Tracker',
-			description: 'Do you want to know where one or the other IP is located?',
-			imgUrl: projImg4,
-		},
-		{
-			title: 'Sunnyside',
-			description:
-				'Transform your brand. Stand out to the right audience. Graphic design. Photography.',
-			imgUrl: projImg5,
+			link: 'https://roam.constantine-web.space/',
 		},
 		{
 			title: 'Power of AI',
 			description:
 				"Here, we're passionate about all things AI. Whether you're a newcomer to the field or a seasoned expert, we have everything you need to learn more about this exciting and rapidly-evolving technology.",
+			imgUrl: projImg4,
+			link: 'https://ai.constantine-web.space/',
+		},
+		{
+			title: 'IP Address Tracker',
+			description: 'Do you want to know where one or the other IP is located?',
+			imgUrl: projImg5,
+			link: 'https://ip.constantine-web.space/',
+		},
+		{
+			title: 'COFFE SHOP',
+			description: 'SO, YOU WANT COFFE?',
 			imgUrl: projImg6,
+			link: 'https://coffee.constantine-web.space/',
+		},
+		{
+			title: 'RICH STONE',
+			description: `
+			- Kitchen countertops with natural stone
+			- Window sills with natural and artificial stone
+ 			- Marble and granite stairs
+			- Granite and marble bar counters`,
+			imgUrl: projImg2,
+			link: 'https://rich-stone.dp.ua/',
+		},
+		{
+			title: 'SK GRANITE',
+			description: 'Installation of a tombstone in the place of rest of a person.',
+			imgUrl: projImg7,
+			link: 'https://sk-granite.dp.ua/',
 		},
 	];
 	return (
