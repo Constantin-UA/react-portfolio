@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import TrackVisibility from 'react-on-screen';
 import headerImg from '../assets/img/header-logo.svg';
 import 'animate.css/animate.min.css';
-import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
 	const [loopNum, setLoopNum] = useState(0);
@@ -49,7 +49,35 @@ export const Banner = () => {
 			<Container>
 				<Row className="align-items-center">
 					<Col xs={12} md={6} xl={7}>
-						<TrackVisibility>
+						<div className="animate__animated animate__fadeIn">
+							<span className="tagline">Welcome to my portfolio site!</span>
+							<h1>{`Hi I'm Konstantin`}</h1>
+							<h1>
+								{`-`}
+								<span className="wrap"> {text}</span>
+							</h1>
+							<p>
+								As a developer, I prioritize user experience and accessibility, and strive to create
+								sites that are both visually appealing and easy to use. Whether you're looking to
+								build a new website from scratch, or enhance an existing one, I'm confident that I
+								can help bring your vision to life.
+							</p>
+							<button onClick={() => console.log('connect')}>
+								Let's connect <ArrowRightCircle size={25} />
+							</button>
+						</div>
+					</Col>
+					<Col xs={12} md={6} xl={5}>
+						<img src={headerImg} alt="Headder Img" />
+					</Col>
+				</Row>
+			</Container>
+		</section>
+	);
+};
+
+/* 
+<TrackVisibility>
 							{({ isVisible }) => (
 								<div
 									className={
@@ -76,12 +104,4 @@ export const Banner = () => {
 								</div>
 							)}
 						</TrackVisibility>
-					</Col>
-					<Col xs={12} md={6} xl={5}>
-						<img src={headerImg} alt="Headder Img" />
-					</Col>
-				</Row>
-			</Container>
-		</section>
-	);
-};
+*/
