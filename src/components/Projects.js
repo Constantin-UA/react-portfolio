@@ -1,14 +1,14 @@
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import { ProjectCard } from './ProjectCard';
 
-import projImg1 from '../assets/img/proj/alfa.png';
-import projImg3 from '../assets/img/proj/roam.png';
-import projImg4 from '../assets/img/proj/ai.png';
-import projImg5 from '../assets/img/proj/ipfind.png';
-import projImg6 from '../assets/img/proj/coffe.png';
-import projImg2 from '../assets/img/proj/richS.png';
-import projImg7 from '../assets/img/proj/skgranite.png';
-import colorSharp2 from '../assets/img/color-sharp2.png';
+import projImg1 from '../assets/img/proj/alfa.webp';
+import projImg3 from '../assets/img/proj/roam.webp';
+import projImg4 from '../assets/img/proj/ai.webp';
+import projImg5 from '../assets/img/proj/ipfind.webp';
+import projImg6 from '../assets/img/proj/coffe.webp';
+import projImg2 from '../assets/img/proj/richS.webp';
+import projImg7 from '../assets/img/proj/skgranite.webp';
+import colorSharp2 from '../assets/img/color-sharp2.webp';
 import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 	const projects = [
@@ -71,7 +71,7 @@ export const Projects = () => {
 								<div
 									className={
 										isVisible
-											? 'animate__animated animate__slideInUp'
+											? 'animate__animated animate__heartBeat'
 											: 'animate__animated animate__fadeOut'
 									}
 								>
@@ -105,21 +105,23 @@ export const Projects = () => {
 								<Tab.Pane eventKey="first">
 									<Row>
 										{projects.map((project, index) => {
-											return <ProjectCard key={index} {...project} />;
+											return index <= 2 ? <ProjectCard key={index} {...project} /> : null;
 										})}
 									</Row>
 								</Tab.Pane>
 								<Tab.Pane eventKey="second">
 									<Row>
 										{projects.map((project, index) => {
-											return <ProjectCard key={index} {...project} />;
+											return index >= 3 && index <= 5 ? (
+												<ProjectCard key={index} {...project} />
+											) : null;
 										})}
 									</Row>
 								</Tab.Pane>
 								<Tab.Pane eventKey="third">
 									<Row>
 										{projects.map((project, index) => {
-											return <ProjectCard key={index} {...project} />;
+											return index >= 6 ? <ProjectCard key={index} {...project} /> : null;
 										})}
 									</Row>
 								</Tab.Pane>

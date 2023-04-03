@@ -1,10 +1,10 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
 import { Newslatter } from './Newsletter';
-import logo from '../assets/img/logo/logo.png';
+import logo from '../assets/img/logo/logo.webp';
 import navLogo1 from '../assets/img/nav-icon1.svg';
 import navLogo2 from '../assets/img/nav-icon2.svg';
-import navLogo3 from '../assets/img/nav-icon.svg';
+import navLogo3 from '../assets/img/nav-icon0.svg';
 export const Footer = () => {
 	return (
 		<footer className="footer">
