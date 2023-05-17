@@ -19,10 +19,10 @@ export const Newslatter = () => {
 		<Col lg={12}>
 			<div className="newsletter-bx">
 				<Row>
-					<Col lg={12} md={6} xl={5} className="d-flex align-items-center text-align-center">
+					<Col md={6} lg={6} xl={6}>
 						<h3>Contact with me</h3>
 					</Col>
-					<Col md={6} xl={7}>
+					<Col md={10} lg={12} xl={12}>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className={errors.email ? 'new-email-bx error-border' : 'new-email-bx'}>
 								<input

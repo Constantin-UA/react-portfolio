@@ -14,43 +14,38 @@ export const Projects = () => {
 	const projects = [
 		{
 			title: 'Design dev',
-			description:
-				'Where art meets design. From logo and branding design to web design, packaging, and more. With a focus on quality and creativity, we strive to make a positive impact on the world, one design at a time.',
+			description: 'Where art meets design. ',
 			imgUrl: projImg1,
-			link: 'https://constantine-web.space/',
+			link: 'https://constantin-ua.github.io/',
 		},
 		{
 			title: 'ROAMWELL TRAVEL CO.',
 			description: 'WHERE EVERY JOURNEY IS A STORY WORTH TELLING',
 			imgUrl: projImg3,
-			link: 'https://roam.constantine-web.space/',
+			link: 'https://constantin-ua.github.io/',
 		},
 		{
 			title: 'Power of AI',
-			description:
-				"Here, we're passionate about all things AI. Whether you're a newcomer to the field or a seasoned expert, we have everything you need to learn more about this exciting and rapidly-evolving technology.",
+			description: "Here, we're passionate about all things AI.",
 			imgUrl: projImg4,
-			link: 'https://ai.constantine-web.space/',
+			link: 'https://constantin-ua.github.io/',
 		},
 		{
 			title: 'IP Address Tracker',
 			description: 'Do you want to know where one or the other IP is located?',
 			imgUrl: projImg5,
-			link: 'https://ip.constantine-web.space/',
+			link: 'https://constantin-ua.github.io/',
 		},
 		{
 			title: 'COFFE SHOP',
 			description: 'SO, YOU WANT COFFE?',
 			imgUrl: projImg6,
-			link: 'https://coffee.constantine-web.space/',
+			link: 'https://constantin-ua.github.io/',
 		},
 		{
 			title: 'RICH STONE',
 			description: `
-			- Kitchen countertops with natural stone
-			- Window sills with natural and artificial stone
- 			- Marble and granite stairs
-			- Granite and marble bar counters`,
+			- Kitchen countertops with natural stone`,
 			imgUrl: projImg2,
 			link: 'https://rich-stone.dp.ua/',
 		},
@@ -71,7 +66,7 @@ export const Projects = () => {
 								<div
 									className={
 										isVisible
-											? 'animate__animated animate__heartBeat'
+											? 'animate__animated animate__fadeIn'
 											: 'animate__animated animate__fadeOut'
 									}
 								>
